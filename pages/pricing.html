@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost & Tariffs - Ivan Vivas Garcia</title>
+    <meta name="description" content="Transparent pricing for software development and consulting services - Ivan Vivas Garcia">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/pricing.css">
+    <link rel="icon" href="../images/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo.png" alt="Ivan Vivas Garcia Logo" class="logo-img">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#services" class="nav-link">Services</a></li>
+                <li><a href="../index.html#about" class="nav-link">About Me</a></li>
+                <li><a href="../pages/pricing.html" class="nav-link active">Cost & Tariffs</a></li>
+                <li><a href="../pages/contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Pricing Hero Section -->
+    <section class="pricing-hero">
+        <div class="container">
+            <div class="pricing-hero-content">
+                <h1 class="pricing-title">Simple, Transparent Pricing</h1>
+                <p class="pricing-subtitle">
+                    Choose the service model that best fits your project needs. 
+                    All packages include professional support and quality assurance.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Cards -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-grid">
+                <!-- Hourly Consultation -->
+                <div class="pricing-card">
+                    <div class="pricing-card-content">
+                        <div class="pricing-header">
+                            <div class="pricing-icon">⏱️</div>
+                            <h3 class="pricing-card-title">Hourly Consultation</h3>
+                            <p class="pricing-description">Perfect for quick consultations and small tasks</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="price-amount">$35</span>
+                            <span class="price-period">/hour</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>✓ Technical consultation</li>
+                            <li>✓ Code reviews</li>
+                            <li>✓ Problem solving</li>
+                            <li>✓ Architecture planning</li>
+                            <li>✓ Email support</li>
+                        </ul>
+                    </div>
+                    <a href="../pages/contact.html" class="pricing-btn">Get Started</a>
+                </div>
+
+                <!-- Project-Based -->
+                <div class="pricing-card featured">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="pricing-card-content">
+                        <div class="pricing-header">
+                            <div class="pricing-icon">🚀</div>
+                            <h3 class="pricing-card-title">Project-Based</h3>
+                            <p class="pricing-description">Complete solutions tailored to your requirements</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="price-amount">$500</span>
+                            <span class="price-period">and up</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>✓ Full project development</li>
+                            <li>✓ Custom requirements analysis</li>
+                            <li>✓ Testing & QA included</li>
+                            <li>✓ Documentation provided</li>
+                            <li>✓ 30 days support</li>
+                            <li>✓ Source code delivery</li>
+                        </ul>
+                    </div>
+                    <a href="../pages/contact.html" class="pricing-btn featured-btn">Start Project</a>
+                </div>
+
+                <!-- Monthly Retainer -->
+                <div class="pricing-card">
+                    <div class="pricing-card-content">
+                        <div class="pricing-header">
+                            <div class="pricing-icon">📅</div>
+                            <h3 class="pricing-card-title">Monthly Retainer</h3>
+                            <p class="pricing-description">Ongoing support and development partnership</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="price-amount">$1,200</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>✓ 40 hours monthly allocation</li>
+                            <li>✓ Priority support</li>
+                            <li>✓ Regular progress reports</li>
+                            <li>✓ Flexible task management</li>
+                            <li>✓ Direct communication channel</li>
+                            <li>✓ Long-term partnership</li>
+                        </ul>
+                    </div>
+                    <a href="../pages/contact.html" class="pricing-btn">Discuss Terms</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing FAQ -->
+    <section class="pricing-faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What's included in project-based pricing?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Project-based pricing includes complete development from requirements analysis to final delivery, testing, documentation, and 30 days of post-launch support. The final price depends on project complexity and requirements.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Do you offer student discounts?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! As a fellow student, I understand budget constraints. I offer special rates for educational projects and student entrepreneurs. Contact me to discuss your specific situation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What payment methods do you accept?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>I accept bank transfers, PayPal, and major credit cards. For larger projects, I typically work with 50% upfront and 50% upon completion. Monthly retainers are billed at the beginning of each month.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Can we discuss a custom arrangement?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! Every project is unique. I'm flexible and happy to create a custom arrangement that works for both parties. Let's discuss your specific needs and find the best solution.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What if I need rush delivery?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Rush projects are possible depending on my current workload and the project scope. Rush delivery typically includes a 50% surcharge to accommodate the expedited timeline and priority handling.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Do you provide ongoing maintenance?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! I offer ongoing maintenance and support services. This can be arranged as part of a monthly retainer or on an as-needed basis. Maintenance includes bug fixes, updates, and minor enhancements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="pricing-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Let's discuss your requirements and find the perfect solution for your needs.</p>
+                <div class="cta-buttons">
+                    <a href="../pages/contact.html" class="cta-button primary">Get in Touch</a>
+                    <a href="../index.html#services" class="cta-button secondary">View Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html#services">Web Development</a></li>
+                        <li><a href="../index.html#services">Systems Administration</a></li>
+                        <li><a href="../index.html#services">Technical Consulting</a></li>
+                        <li><a href="../pages/pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html#about">Education</a></li>
+                        <li><a href="../index.html#about">Experience</a></li>
+                        <li><a href="../index.html#about">Skills</a></li>
+                        <li><a href="../index.html#about">International Exchange</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Ready to start your project?</p>
+                    <ul class="footer-links">
+                        <li><a href="mailto:ivanvivasgar@gmail.com">ivanvivasgar@gmail.com</a></li>
+                        <li><a href="tel:+5246229184770">+52 462-291-8477</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ivan Vivas Garcia. All rights reserved.</p>
+                <p>Professional services delivered with excellence and integrity.</p>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ivan-vivas-software-eng" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+                    <a href="mailto:ivanvivasgar@gmail.com" class="social-link">Email</a>
+                    <a href="https://github.com/IvanVivasGar" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/pricing.js"></script>
+</body>
+</html>

@@ -1,0 +1,632 @@
+/* ==========================================================================
+   ABOUT PAGE STYLES
+   Dedicated styles for the about me page
+   ========================================================================== */
+
+/* ==========================================================================
+   1. ABOUT HERO SECTION
+   ========================================================================== */
+
+.about-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-hero);
+    padding: 0 var(--container-padding);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 80%, var(--tertiary-blue) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeInUp 1s var(--transition-smooth);
+}
+
+.hero-image {
+    text-align: center;
+}
+
+.profile-photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent-blue);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-smooth);
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.about-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 200;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: var(--letter-spacing-tightest);
+}
+
+.about-subtitle {
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+    color: var(--text-subtle);
+    line-height: 1.6;
+    font-weight: var(--font-weight-regular);
+    letter-spacing: var(--letter-spacing-tight);
+    margin-bottom: 3rem;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 200;
+    color: var(--accent-blue);
+    line-height: 1;
+    letter-spacing: var(--letter-spacing-tighter);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.5rem;
+}
+
+/* ==========================================================================
+   2. EDUCATION SECTION
+   ========================================================================== */
+
+.education-section {
+    padding: 8rem 0;
+    background: var(--background-primary);
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+.education-card {
+    background: var(--background-secondary);
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-light);
+    transition: all var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.education-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--primary-blue));
+    opacity: 0;
+    transition: opacity var(--transition-smooth);
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.education-card:hover::before {
+    opacity: 1;
+}
+
+.education-icon {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.education-content h3 {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.institution {
+    color: var(--accent-blue);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 0.5rem;
+}
+
+.period, .gpa, .description {
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.highlights {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.highlight-badge {
+    background: var(--tertiary-blue);
+    color: var(--accent-blue);
+    padding: 0.375rem 0.875rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ==========================================================================
+   3. SKILLS SECTION
+   ========================================================================== */
+
+.skills-section {
+    padding: 8rem 0;
+    background: var(--background-secondary);
+}
+
+.skills-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.skill-category {
+    background: var(--background-primary);
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-light);
+    transition: all var(--transition-smooth);
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.category-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.category-icon {
+    font-size: 1.5rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.skill-item {
+    position: relative;
+}
+
+.skill-name {
+    display: block;
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 0.9375rem;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--border-light);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-blue), var(--primary-blue));
+    border-radius: 4px;
+    width: 0%;
+    transition: width 1.5s ease-in-out;
+    position: relative;
+}
+
+.skill-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+.skill-level {
+    position: absolute;
+    right: 0;
+    top: -1.5rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: var(--font-weight-medium);
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* ==========================================================================
+   4. EXPERIENCE TIMELINE
+   ========================================================================== */
+
+.experience-section {
+    padding: 8rem 0;
+    background: var(--background-primary);
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 4rem auto 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent-blue), var(--primary-blue));
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 4rem;
+    padding-left: 80px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 20px;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    background: var(--accent-blue);
+    border: 4px solid var(--background-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px var(--accent-blue);
+}
+
+.timeline-content {
+    background: var(--background-secondary);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid var(--border-light);
+    transition: all var(--transition-smooth);
+}
+
+.timeline-content:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.timeline-content h3 {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.timeline-period {
+    color: var(--accent-blue);
+    font-weight: var(--font-weight-medium);
+    font-size: 0.9375rem;
+    margin-bottom: 1rem;
+}
+
+.timeline-description {
+    color: var(--text-subtle);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-skills {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.skill-tag {
+    background: var(--tertiary-blue);
+    color: var(--accent-blue);
+    padding: 0.375rem 0.875rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: var(--font-weight-medium);
+}
+
+/* ==========================================================================
+   5. INTERESTS SECTION
+   ========================================================================== */
+
+.interests-section {
+    padding: 8rem 0;
+    background: var(--background-secondary);
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+.interest-card {
+    background: var(--background-primary);
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid var(--border-light);
+    transition: all var(--transition-smooth);
+}
+
+.interest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.interest-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.interest-card h3 {
+    font-size: 1.125rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.interest-card p {
+    color: var(--text-subtle);
+    line-height: 1.5;
+    font-size: 0.9375rem;
+}
+
+/* ==========================================================================
+   6. CALL TO ACTION SECTION
+   ========================================================================== */
+
+.about-cta {
+    padding: 8rem 0;
+    background: linear-gradient(135deg, var(--text-primary) 0%, #2c2c2e 100%);
+    color: var(--background-primary);
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 200;
+    margin-bottom: 1.5rem;
+    letter-spacing: var(--letter-spacing-tighter);
+}
+
+.cta-content p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    font-size: 1rem;
+    transition: all var(--transition-smooth);
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.cta-button.primary {
+    background: var(--accent-blue);
+    color: var(--background-primary);
+    border: 2px solid var(--accent-blue);
+}
+
+.cta-button.primary:hover {
+    background: #0051d5;
+    border-color: #0051d5;
+    transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: var(--background-primary);
+    border: 2px solid var(--background-primary);
+}
+
+.cta-button.secondary:hover {
+    background: var(--background-primary);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   7. ANIMATIONS
+   ========================================================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   8. RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 6rem var(--container-padding) 4rem;
+    }
+    
+    .about-hero-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    .education-section,
+    .skills-section,
+    .experience-section,
+    .interests-section {
+        padding: 6rem 0;
+    }
+    
+    .education-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .skills-categories {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .timeline::before {
+        left: 15px;
+    }
+    
+    .timeline-item {
+        padding-left: 50px;
+    }
+    
+    .timeline-marker {
+        left: 6px;
+        width: 18px;
+        height: 18px;
+    }
+    
+    .interests-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-cta {
+        padding: 6rem 0;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .hero-stats {
+        gap: 1.5rem;
+    }
+    
+    .education-card,
+    .skill-category,
+    .timeline-content {
+        padding: 2rem 1.5rem;
+    }
+    
+    .interest-card {
+        padding: 2rem 1.5rem;
+    }
+}
