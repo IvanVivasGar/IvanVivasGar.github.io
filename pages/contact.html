@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Ivan Vivas Garcia</title>
+    <meta name="description" content="Get in touch with Ivan Vivas Garcia - Software Engineering Student & Developer">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo.png" alt="Ivan Vivas Garcia Logo" class="logo-img">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#services" class="nav-link">Services</a></li>
+                <li><a href="../index.html#about" class="nav-link">About Me</a></li>
+                <li><a href="../pages/pricing.html" class="nav-link">Cost & Tariffs</a></li>
+                <li><a href="../pages/contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1 class="contact-title">Let's Work Together</h1>
+                <p class="contact-subtitle">
+                    Ready to bring your ideas to life? I'm here to help you build innovative 
+                    software solutions and optimize your systems infrastructure.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="contact-methods">
+        <div class="container">
+            <h2 class="section-title">How to Reach Me</h2>
+            <div class="contact-grid">
+                <!-- Email Contact -->
+                <div class="contact-card">
+                    <div class="contact-card-content">
+                        <div class="contact-card-icon">
+                            <span class="icon">📧</span>
+                        </div>
+                        <h3>Email Me</h3>
+                        <p>Best for detailed project discussions and file sharing</p>
+                        <div class="contact-info">
+                            <span class="contact-value">ivanvivasgar@gmail.com</span>
+                        </div>
+                    </div>
+                    <a href="mailto:ivanvivasgar@gmail.com?subject=Project Inquiry&body=Hi Ivan, I'd like to discuss a project with you." class="contact-btn">Send Email</a>
+                </div>
+
+                <!-- Phone Contact -->
+                <div class="contact-card">
+                    <div class="contact-card-content">
+                        <div class="contact-card-icon">
+                            <span class="icon">📱</span>
+                        </div>
+                        <h3>Call or Text</h3>
+                        <p>Quick questions and urgent matters</p>
+                        <div class="contact-info">
+                            <span class="contact-value">+52 462-291-8477</span>
+                            <span class="contact-note">Available: Mon-Fri, 9AM-6PM (CST)</span>
+                        </div>
+                    </div>
+                    <a href="tel:+5246229184770" class="contact-btn">Call Now</a>
+                </div>
+
+                <!-- LinkedIn Contact -->
+                <div class="contact-card">
+                    <div class="contact-card-content">
+                        <div class="contact-card-icon">
+                            <span class="icon">💼</span>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <p>Professional networking and career opportunities</p>
+                        <div class="contact-info">
+                            <span class="contact-value">ivan-vivas-software-eng</span>
+                        </div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/ivan-vivas-software-eng" target="_blank" rel="noopener noreferrer" class="contact-btn">Connect</a>
+                </div>
+
+                <!-- GitHub Contact -->
+                <div class="contact-card">
+                    <div class="contact-card-content">
+                        <div class="contact-card-icon">
+                            <span class="icon">💻</span>
+                        </div>
+                        <h3>GitHub</h3>
+                        <p>View my code, collaborate on projects</p>
+                        <div class="contact-info">
+                            <span class="contact-value">IvanVivasGar</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/IvanVivasGar" target="_blank" rel="noopener noreferrer" class="contact-btn">View Profile</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2 class="section-title">Send Me a Message</h2>
+                    <p class="form-description">
+                        Fill out the form below and I'll get back to you within 24 hours. 
+                        Please provide as much detail as possible about your project.
+                    </p>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company/Organization</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="projectType">Project Type *</label>
+                        <select id="projectType" name="projectType" required>
+                            <option value="">Select a project type</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="systems-admin">Systems Administration</option>
+                            <option value="database-design">Database Design</option>
+                            <option value="technical-consulting">Technical Consulting</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="budget">Estimated Budget</label>
+                        <select id="budget" name="budget">
+                            <option value="">Select budget range</option>
+                            <option value="under-1000">Under $1,000 USD</option>
+                            <option value="1000-5000">$1,000 - $5,000 USD</option>
+                            <option value="5000-10000">$5,000 - $10,000 USD</option>
+                            <option value="10000-plus">$10,000+ USD</option>
+                            <option value="discuss">Let's discuss</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="timeline">Project Timeline</label>
+                        <select id="timeline" name="timeline">
+                            <option value="">Select timeline</option>
+                            <option value="asap">ASAP</option>
+                            <option value="1-month">Within 1 month</option>
+                            <option value="2-3-months">2-3 months</option>
+                            <option value="3-6-months">3-6 months</option>
+                            <option value="6-months-plus">6+ months</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Project Description *</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Please describe your project, requirements, and any specific technologies you'd like to use..." required></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading" style="display: none;">Sending...</span>
+                        </button>
+                        <p class="form-note">* Required fields</p>
+                    </div>
+                </form>
+                
+                <div class="form-success" id="formSuccess" style="display: none;">
+                    <div class="success-icon">✅</div>
+                    <h3>Message Sent Successfully!</h3>
+                    <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Info -->
+    <section class="contact-info-extra">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🕒 Response Time</h3>
+                    <p>I typically respond to emails within 24 hours during business days.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🌍 Location</h3>
+                    <p>Based in Irapuato, Guanajuato, Mexico. Available for remote work globally.</p>
+                </div>
+                <div class="info-card">
+                    <h3>💬 Languages</h3>
+                    <p>Spanish (Native), English (C1), French (Intermediate), Italian (Basic)</p>
+                </div>
+                <div class="info-card">
+                    <h3>⏰ Availability</h3>
+                    <p>Currently accepting new projects. Student schedule allows flexible hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html#services">Web Development</a></li>
+                        <li><a href="../index.html#services">Systems Administration</a></li>
+                        <li><a href="../index.html#services">Technical Consulting</a></li>
+                        <li><a href="../pages/pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html#about">Education</a></li>
+                        <li><a href="../index.html#about">Experience</a></li>
+                        <li><a href="../index.html#about">Skills</a></li>
+                        <li><a href="../index.html#about">International Exchange</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Ready to start your project?</p>
+                    <ul class="footer-links">
+                        <li><a href="mailto:ivanvivasgar@gmail.com">ivanvivasgar@gmail.com</a></li>
+                        <li><a href="tel:+5246229184770">+52 462-291-8477</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ivan Vivas Garcia. All rights reserved.</p>
+                <p>Professional services delivered with excellence and integrity.</p>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ivan-vivas-software-eng" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+                    <a href="mailto:ivanvivasgar@gmail.com" class="social-link">Email</a>
+                    <a href="https://github.com/IvanVivasGar" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/contact.js"></script>
+</body>
+</html>
