@@ -1,0 +1,73 @@
+# Portfolio Content & Personal Information
+Services & Info
+Services&Info.txt
+*.txt
+
+# Personal notes and drafts
+notes/
+drafts/
+content-planning/
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Environment and configuration files
+.env
+.env.local
+.env.production
+config.json
+
+# Dependencies (if any)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs (if using build tools)
+dist/
+build/
+.cache/
+
+# Personal documents
+personal/
+private/
+credentials/
+
+# Image originals (keep only optimized versions)
+images/originals/
+images/raw/
+
+# Design files
+*.psd
+*.ai
+*.sketch
+*.figma
+
+# Archive files
+*.zip
+*.rar
+*.7z
+*.tar.gz

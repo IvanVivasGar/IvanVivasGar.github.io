@@ -3,10 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Ivan Vivas Garcia - Professional Portfolio</title>
+    <meta name="description" content="Professional portfolio showcasing services and expertise">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>Welcome to my website.</p>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <img src="images/logo.png" alt="Ivan Vivas Garcia Logo" class="logo-img">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About Me</a></li>
+                <li><a href="#pricing" class="nav-link">Cost & Tariffs</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero/Banner Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Ivan Vivas Garcia</h1>
+                <p class="hero-subtitle">Software and Systems Engineering</p>
+                
+                <ul class="credentials">
+                    <li>Software Engineering Student - Universidad La Salle Bajío (GPA: 9.4)</li>
+                    <li>Academic Exchange - Universidade de Vigo, Spain</li>
+                    <li>Full Stack Development & Systems Administration</li>
+                    <li>Rudyard Kipling Academic Excellence Award</li>
+                </ul>
+                
+                <a href="#services" class="cta-button">Explore My Services</a>
+            </div>
+            
+            <div class="hero-image">
+                <div class="profile-container">
+                    <img src="images/profile-photo.jpg" alt="Ivan Vivas Garcia - Professional Photo" class="profile-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Skills Section -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Core Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-icon">�</div>
+                    <h3>Full Stack Development</h3>
+                    <p>Python (FastAPI), Java, C#, JavaScript - Building robust web applications</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>Database Management</h3>
+                    <p>MySQL, SQL Server, MariaDB - Data modeling and optimization</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">�</div>
+                    <h3>Systems Administration</h3>
+                    <p>Linux & Windows Server - Docker, Apache, NGINX, Active Directory</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">🌐</div>
+                    <h3>Network & Infrastructure</h3>
+                    <p>Network routing, DNS management, Virtual machines, and server deployment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick About Section -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Professional Overview</h2>
+                    <p class="about-description">
+                        Currently pursuing Software Engineering at Universidad La Salle Bajío with a 9.4 GPA, 
+                        I specialize in full-stack development and systems administration. My experience includes 
+                        server implementation, database management, and network infrastructure across multiple platforms.
+                    </p>
+                    <p class="about-description">
+                        Having completed an academic exchange in Spain and worked as both a transcriptionist at TransPerfect 
+                        and an English teacher, I bring strong multilingual communication skills and attention to detail 
+                        to every technical project.
+                    </p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">9.4</span>
+                            <span class="stat-label">GPA Average</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label">Languages Spoken</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-features">
+                    <h3>Why Choose Me</h3>
+                    <ul class="feature-list">
+                        <li>Strong academic background with proven excellence (9.4 GPA)</li>
+                        <li>International experience through academic exchange in Spain</li>
+                        <li>Multilingual capabilities (Spanish, English C1, French, Italian)</li>
+                        <li>Hands-on experience in transcription and teaching</li>
+                        <li>Comprehensive technical skills across multiple platforms</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services-preview">
+        <div class="container">
+            <h2 class="section-title">What I Offer</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Web Development</h3>
+                    <p>Full-stack web applications using modern technologies and frameworks</p>
+                    <ul>
+                        <li>Python (FastAPI) backend development</li>
+                        <li>JavaScript frontend applications</li>
+                        <li>Database design and optimization</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Systems Administration</h3>
+                    <p>Server setup, management, and infrastructure deployment solutions</p>
+                    <ul>
+                        <li>Linux & Windows Server administration</li>
+                        <li>Docker containerization</li>
+                        <li>Apache, NGINX, and DNS configuration</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Technical Consulting</h3>
+                    <p>Expert guidance on technology solutions and system architecture</p>
+                    <ul>
+                        <li>Database design and migration</li>
+                        <li>Network infrastructure planning</li>
+                        <li>Technical documentation and training</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="services-cta">
+                <a href="#services" class="secondary-button">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Preview -->
+    <section class="contact-preview">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">Ready to Get Started?</h2>
+                <p class="contact-description">
+                    Let's discuss how I can help you achieve your goals. Feel free to reach out 
+                    through any of the channels below to get in touch.
+                </p>
+                <div class="contact-options">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email Me</h4>
+                            <p>ivg77850@lasallebajio.edu.mx</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h4>Call or Text</h4>
+                            <p>+52 462-291-8477</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p>linkedin.com/in/ivan-vivas-garcia-a7b377220</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">Systems Administration</a></li>
+                        <li><a href="#services">Technical Consulting</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">Education</a></li>
+                        <li><a href="#about">Experience</a></li>
+                        <li><a href="#about">Skills</a></li>
+                        <li><a href="#about">International Exchange</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Ready to start your project?</p>
+                    <ul class="footer-links">
+                        <li><a href="mailto:ivg77850@lasallebajio.edu.mx">ivg77850@lasallebajio.edu.mx</a></li>
+                        <li><a href="tel:+5246229184770">+52 462-291-8477</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ivan Vivas Garcia. All rights reserved.</p>
+                <p>Professional services delivered with excellence and integrity.</p>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ivan-vivas-garcia-a7b377220" class="social-link">LinkedIn</a>
+                    <a href="mailto:ivg77850@lasallebajio.edu.mx" class="social-link">Email</a>
+                    <a href="https://github.com/IvanVivasGar" class="social-link">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
