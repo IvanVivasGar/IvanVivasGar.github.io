@@ -1,0 +1,650 @@
+/* ==========================================================================
+   SERVICES PAGE STYLES
+   Dedicated styles for the services page
+   ========================================================================== */
+
+/* ==========================================================================
+   1. SERVICES HERO SECTION
+   ========================================================================== */
+
+.services-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-hero);
+    padding: 0 var(--container-padding);
+    position: relative;
+    overflow: hidden;
+}
+
+.services-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 80% 20%, var(--tertiary-blue) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.services-hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 1s var(--transition-smooth);
+}
+
+.services-title {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 200;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    letter-spacing: var(--letter-spacing-tightest);
+}
+
+.services-subtitle {
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+    color: var(--text-subtle);
+    line-height: 1.6;
+    font-weight: var(--font-weight-regular);
+    letter-spacing: var(--letter-spacing-tight);
+    margin-bottom: 3rem;
+}
+
+.hero-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.highlight-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.highlight-icon {
+    font-size: 2.5rem;
+    display: block;
+}
+
+.highlight-item span:last-child {
+    font-size: 0.9375rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+/* ==========================================================================
+   2. MAIN SERVICES SECTION
+   ========================================================================== */
+
+.main-services {
+    padding: 8rem 0;
+    background: var(--background-primary);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.service-card {
+    background: var(--background-primary);
+    border-radius: 24px;
+    padding: 3rem 2.5rem 2.5rem;
+    box-shadow: var(--shadow-light);
+    border: 1px solid var(--border-light);
+    transition: all var(--transition-smooth);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 700px;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+.service-card.featured {
+    background: linear-gradient(135deg, var(--accent-blue) 0%, #0051d5 100%);
+    color: var(--background-primary);
+    border: none;
+    transform: translateY(-10px);
+}
+
+.service-card.featured:hover {
+    transform: translateY(-15px);
+}
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    background: var(--tertiary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+.service-card.featured .service-icon {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.service-badge {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.service-content {
+    flex: 1;
+}
+
+.service-title {
+    font-size: 1.75rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.service-card.featured .service-title {
+    color: var(--background-primary);
+}
+
+.service-description {
+    color: var(--text-subtle);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+}
+
+.service-card.featured .service-description {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.service-features,
+.service-technologies,
+.service-coverage {
+    margin-bottom: 2rem;
+}
+
+.service-features h4,
+.service-technologies h4,
+.service-coverage h4 {
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.service-card.featured .service-features h4,
+.service-card.featured .service-technologies h4,
+.service-card.featured .service-coverage h4 {
+    color: var(--background-primary);
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-list li {
+    padding: 0.5rem 0;
+    color: var(--text-subtle);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.features-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    color: var(--accent-blue);
+    font-weight: bold;
+}
+
+.service-card.featured .features-list li {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.service-card.featured .features-list li::before {
+    color: var(--background-primary);
+}
+
+.tech-tags,
+.coverage-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tech-tag,
+.coverage-tag {
+    background: var(--tertiary-blue);
+    color: var(--accent-blue);
+    padding: 0.375rem 0.75rem;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: var(--font-weight-medium);
+}
+
+.service-card.featured .tech-tag,
+.service-card.featured .coverage-tag {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--background-primary);
+}
+
+.service-pricing {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background: var(--background-secondary);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.service-card.featured .service-pricing {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.price-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.price-label {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.service-card.featured .price-label {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.price-amount {
+    font-size: 2.5rem;
+    font-weight: 200;
+    color: var(--accent-blue);
+    letter-spacing: var(--letter-spacing-tighter);
+}
+
+.service-card.featured .price-amount {
+    color: var(--background-primary);
+}
+
+.price-period {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+.service-card.featured .price-period {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.price-note {
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.service-card.featured .price-note {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.service-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.service-btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    font-size: 0.9375rem;
+    transition: all var(--transition-smooth);
+    letter-spacing: var(--letter-spacing-tight);
+    text-align: center;
+}
+
+.service-btn.primary {
+    background: var(--accent-blue);
+    color: var(--background-primary);
+    border: 2px solid var(--accent-blue);
+}
+
+.service-btn.primary:hover {
+    background: #0051d5;
+    border-color: #0051d5;
+    transform: translateY(-2px);
+}
+
+.service-btn.secondary {
+    background: transparent;
+    color: var(--accent-blue);
+    border: 2px solid var(--accent-blue);
+}
+
+.service-btn.secondary:hover {
+    background: var(--accent-blue);
+    color: var(--background-primary);
+    transform: translateY(-2px);
+}
+
+.service-card.featured .service-btn.primary {
+    background: var(--background-primary);
+    color: var(--accent-blue);
+    border-color: var(--background-primary);
+}
+
+.service-card.featured .service-btn.primary:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.service-card.featured .service-btn.secondary {
+    background: transparent;
+    color: var(--background-primary);
+    border-color: var(--background-primary);
+}
+
+.service-card.featured .service-btn.secondary:hover {
+    background: var(--background-primary);
+    color: var(--accent-blue);
+}
+
+/* ==========================================================================
+   3. SERVICE PROCESS SECTION
+   ========================================================================== */
+
+.service-process {
+    padding: 8rem 0;
+    background: var(--background-secondary);
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.process-step {
+    text-align: center;
+    position: relative;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-blue), var(--primary-blue));
+    color: var(--background-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-medium);
+    margin: 0 auto 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.process-step h3 {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.process-step p {
+    color: var(--text-subtle);
+    line-height: 1.6;
+    font-size: 0.9375rem;
+}
+
+/* ==========================================================================
+   4. WHY CHOOSE US SECTION
+   ========================================================================== */
+
+.why-choose-us {
+    padding: 8rem 0;
+    background: var(--background-primary);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.benefit-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.benefit-content h4 {
+    font-size: 1.125rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.benefit-content p {
+    color: var(--text-subtle);
+    line-height: 1.6;
+    font-size: 0.9375rem;
+}
+
+/* ==========================================================================
+   5. CALL TO ACTION SECTION
+   ========================================================================== */
+
+.services-cta {
+    padding: 8rem 0;
+    background: linear-gradient(135deg, var(--text-primary) 0%, #2c2c2e 100%);
+    color: var(--background-primary);
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 200;
+    margin-bottom: 1.5rem;
+    letter-spacing: var(--letter-spacing-tighter);
+}
+
+.cta-content p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    font-size: 1rem;
+    transition: all var(--transition-smooth);
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.cta-button.primary {
+    background: var(--accent-blue);
+    color: var(--background-primary);
+    border: 2px solid var(--accent-blue);
+}
+
+.cta-button.primary:hover {
+    background: #0051d5;
+    border-color: #0051d5;
+    transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: var(--background-primary);
+    border: 2px solid var(--background-primary);
+}
+
+.cta-button.secondary:hover {
+    background: var(--background-primary);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   6. ANIMATIONS
+   ========================================================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   7. RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .services-hero {
+        padding: 6rem var(--container-padding) 4rem;
+    }
+    
+    .hero-highlights {
+        gap: 2rem;
+    }
+    
+    .main-services {
+        padding: 6rem 0;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .service-card {
+        padding: 2.5rem 2rem;
+        min-height: auto;
+    }
+    
+    .service-actions {
+        flex-direction: column;
+    }
+    
+    .service-process {
+        padding: 6rem 0;
+    }
+    
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .why-choose-us {
+        padding: 6rem 0;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .services-cta {
+        padding: 6rem 0;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .benefit-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .hero-highlights {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
